@@ -17,6 +17,9 @@ body {
   overflow-x: hidden;
 }
 
+.black {
+  background: #000;
+}
 
 #header {
   width: 100%;
@@ -336,7 +339,7 @@ nav ul li a:hover {
 
 #services .card-container .card:hover {
   -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 
@@ -463,5 +466,17 @@ nav ul li a:hover {
     padding: .5rem 7.5rem;
     color: #333;
     background: #FFF200;
+  }
+
+  #services .card-container .card1 button, .card2 button, .card3 button, .card4 button, .card5 button {
+    margin-top: -10rem;
+  }
+
+  #about .content {
+    padding: 20px;
+  }
+
+  #contact .contactos {
+    padding: 20px;
   }
 }
