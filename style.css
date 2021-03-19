@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  z-index: 1000;
+}
+
+#header .logo img {
+  height: 9rem;
+}
+
+#header .fa-bars {
+  font-size: 4rem;
+  z-index: 10000;
+  color: #FFF200;
+  cursor: pointer;
+  display: none;
+}
+
+.fa-times {
+  transform: skew(-180deg) rotate(-180deg);
+}
+
+.nav-toggle {
+  left: 0%;
+}
+
+.header-active{
+  background: #333;
+  height: 6rem;
+  box-shadow: .2rem 0 .5rem #000;
+}
+
+.header-active nav ul {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 4rem;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 2rem;
+}
+
+nav ul li a:hover {
+  color: #FFF200;
+  text-decoration: none;
+}
+
+
+#home {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  position: relative;
+  background-image: url(images/portada.jpg);
+}
+
+#home .content h1 {
+  font-size: 10rem;
+  font-family: 'lemonada',sans-serif;
+  font-weight: bolder;
+  text-shadow: .1rem .1rem .3rem #333;
+  color: #ff0000;
+}
+
+#home .content h2 {
+  font-size: 3.5rem;
+  font-family: 'lemonada',sans-serif;
+  font-weight: bolder;
+  text-shadow: .1rem .1rem .3rem #333;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+#home .content p {
+  font-size: 1.6rem;
+  color: #ccc;
+}
+
+#home .content button {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 5.5rem;
+  width: 18rem;
+  background: #fff;
+}
+
+#home .content button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFF200;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: -1;
+}
+
+#home .content button:hover::before {
+  width: 100%;
+}
+
+
+#services {
+  background: #000;
+  min-height: 100vh;
+}
+
+#services .heading h1 {
+  font-size: 4rem;
+  color: #000;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#services .heading h1 span {
+  color: #FFF200;
+}
+
+#services .heading p {
+  color: #ccc;
+  font-size: 3rem;
+}
+
+#services .card-container {
+  width: 95%;
+  margin: 7rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#services .card-container .card1, .card2, .card3, .card4, .card5{
+  height: 40rem;
+  width: 30rem;
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+#services .card-container .card1 h3, .card5 h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  color: crimson;
+  margin-bottom: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#services .card-container .card2 h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  color: crimson;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#services .card-container .card3 h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  color: crimson;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#services .card-container .card4 h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  color: crimson;
+}
+
+#services .card-container .card1 img, .card2 img, .card3 img, .card4 img, .card5 img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#services .card-container .card2 {
+  height: 40rem;
+  width: 30rem;
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+#services .card-container .card1 p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1.6rem;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+#services .card-container .card2 p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 5.8rem;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+#services .card-container .card3 p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1.6rem;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+#services .card-container .card4 p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 3.7rem;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+#services .card-container .card5 p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 3.7rem;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+#services .card-container .card1 button, .card2 button, .card3 button, .card4 button, .card5 button {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 3.5rem;
+  width: 18rem;
+  background: #333;
+  color: #fff;
+}
+
+#services .card-container .card1 button::before, .card2 button::before, .card3 button::before, .card4 button::before, .card5 button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFF200;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: -1;
+}
+
+#services .card-container .card1 button:hover::before, .card2 button:hover::before, .card3 button:hover::before, .card4 button:hover::before, .card5 button:hover::before {
+  width: 100%;
+}
+
+#services .card-container .card1 button:hover, .card2 button:hover, .card3 button:hover, .card4 button:hover, .card5 button:hover {
+  color: #333;
+}
+
+#services .card-container .card:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+
+#about {
+  background: #000;
+  min-height: 100vh;
+}
+
+#about .heading h1 {
+  font-size: 4rem;
+  color: #fff;
+  padding-top: 7rem;
+  margin-bottom: 8rem;
+}
+
+#about .heading h1 span{
+  color: #FFF200;
+}
+
+#about .content {
+  font-size: 2.5rem;
+  color:#fff;
+  text-align: justify;
+  max-width: 1000px;
+  align-items: center;
+}
+
+
+#contact {
+  min-height: 100vh;
+  width: 100vw;
+  background: #000;
+}
+
+#contact .heading h1 {
+  font-size: 4rem;
+  color: #fff;
+  padding-top: 7rem;
+  margin-bottom: 9rem;
+}
+
+#contact .heading h1 span {
+  color: #FFF200;
+}
+
+#contact .heading h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+#contact .contactos {
+  font-size: 2rem;
+  color:#fff;
+  text-align: justify;
+  align-items: center;
+}
+
+#contact .contactenos {
+  font-size: 2rem;
+  color:#fff;
+  text-align: center;
+  align-items: center;
+}
+
+#contact p span {
+  color: #FFF200;
+  font-weight: bolder;
+}
+
+#contact .siguenos {
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  margin-top: -3rem;
+}
+
+#contact .icons a {
+  font-size: 4rem;
+  margin: 2rem 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+#contact .icons a:hover {
+  color: #FFF200;
+}
+
+
+@media (max-width: 768px) {
+  #header .fa-bars {
+    display: block;
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    height: 100vh;
+    width: 35rem;
+    background: #000;
+  }
+
+  nav ul {
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  nav ul li {
+    margin: 2rem;
+  }
+
+  nav ul li a{
+    font-style: 3.5rem;
+    border-radius: 5rem;
+  }
+
+  nav ul li a:hover {
+    padding: .5rem 7.5rem;
+    color: #333;
+    background: #FFF200;
+  }
+}

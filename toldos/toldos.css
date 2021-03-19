@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background: #000;
+}
+
+body {
+  overflow-x: hidden;
+  background: #000;
+}
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  z-index: 1000;
+}
+
+#header .logo img {
+  height: 9rem;
+}
+
+#header .fa-bars {
+  font-size: 4rem;
+  z-index: 10000;
+  color: #FFF200;
+  cursor: pointer;
+  display: none;
+}
+
+.fa-times {
+  transform: skew(-180deg) rotate(-180deg);
+}
+
+.nav-toggle {
+  left: 0%;
+}
+
+.header-active{
+  background: #333;
+  height: 6rem;
+  box-shadow: .2rem 0 .5rem #000;
+}
+
+.header-active nav ul {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 4rem;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 2rem;
+}
+
+nav ul li a:hover {
+  color: #FFF200;
+  text-decoration: none;
+}
+
+
+#toldos {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  position: relative;
+  min-height: 150vh;
+  background: #000;
+  padding-top: 10rem;
+}
+
+#toldos h1 {
+  font-size: 4rem;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#toldos h1 span{
+  color: #FFF200;
+}
+
+#toldos p {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+#toldos h1 {
+  font-size: 4rem;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#toldos h3 {
+  font-size: 3rem;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#toldos h3 span{
+  color: #FFF200;
+}
+
+
+.images {
+  max-width: 1700px;
+  margin-left: 8rem;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    #header .fa-bars {
+      display: block;
+    }
+
+    html {
+      font-size: 50%;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: -120%;
+      height: 100vh;
+      width: 35rem;
+      background: #000;
+    }
+
+    nav ul {
+      flex-flow: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    nav ul li {
+      margin: 2rem;
+    }
+
+    nav ul li a{
+      font-style: 3.5rem;
+      border-radius: 5rem;
+    }
+
+    nav ul li a:hover {
+      padding: .5rem 7.5rem;
+      color: #333;
+      background: #FFF200;
+    }
+  }
